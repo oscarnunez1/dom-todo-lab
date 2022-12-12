@@ -11,7 +11,7 @@
 const inpEl = document.getElementById("value")
 const btnEl = document.getElementById("submit-button")
 let ulEl = document.getElementById("todo-list")
-const resetBtnEl = document.getElementByIdd("reset-button")
+const resetBtnEl = document.getElementById("reset-button")
 
 
 
@@ -23,9 +23,11 @@ btnEl.addEventListener('click', function(evt) {
     li.textContent = inpEl.value
     let ulEl = document.querySelector('ul')
     ulEl.appendChild(li)
-    console.log(li);
+    inpEl.value = ""
 })
 
-resetBtnEl.addEventListener("click", )
+resetBtnEl.addEventListener("click", function() {
+    ulEl.innerHTML = ""
+})
 
 /*-------------------------------- Functions --------------------------------*/
